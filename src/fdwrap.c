@@ -132,7 +132,7 @@ DIR* Opendir(char* dirname)
    DIR* dp;
    int fd;
    if ((dp = opendir(dirname))) {
-       fd = DIR_FILENO(dp);
+       fd = fileno(dp);
        if (fd >= nSize)
 	 if (!GrowTable(fd)) {
 	   closedir(dp);
@@ -220,7 +220,7 @@ int FClose (FILE* fp)
 
 int Closedir (DIR *dp) 
 {
-    int fd = DIR_FILENO(dp);
+    int fd = fileno(dp);
 
     FdTab[fd].bOpen = FDW_CLOSED;
     if (FdTab[fd].fp != dp) {

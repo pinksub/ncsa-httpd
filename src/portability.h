@@ -210,7 +210,6 @@ typedef int mode_t;
 #endif
 /* Needed for newer versions of libc (5.2.x) to use FD_LINUX hack */
 #define DIRENT_ILLEGAL_ACCESS
-#define DIR_FILENO(p)  ((p)->dd_fd)
 #define CMSG_DATA(cmptr)  ((cmptr)->cmsg_data)
 #define NEED_SYS_UN_H
 #undef BSD
@@ -414,7 +413,6 @@ extern char *getenv();
 # include <dirent.h>
 # define DIR_TYPE dirent
 # ifndef DIR_FILENO
-#  define DIR_FILENO(p) ((p)->dd_fd)
 # endif /* DIR_FILENO */
 #else
 # include <sys/dir.h>
