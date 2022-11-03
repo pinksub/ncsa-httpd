@@ -49,7 +49,7 @@ hp-gcc:
 	make all CC=gcc CFLAGS="-DHPUX" EXTRA_LIBS=-lndbm
 
 linux:
-	make all CC=gcc CFLAGS="-DLINUX" EXTRA_LIBS=-lgdbm
+	make all CC=gcc CFLAGS="-DLINUX" EXTRA_LIBS="-lgdbm -lgdbm_compat -lcrypt"
 
 netbsd: 
 	make all CC=cc CFLAGS="-DNETBSD" EXTRA_LIBS=-lcrypt

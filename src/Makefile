@@ -71,7 +71,7 @@ DBM_CFLAGS = -DDBM_SUPPORT
 # Place here any extra libraries you may need to link to. You
 # shouldn't have to.
 
-EXTRA_LIBS=
+EXTRA_LIBS= -lcrypt -lgdbm -lgdbm_compat
 
 # Place here any flags you may need upon linking, such as a flag to
 # prevent dynamic linking (if desired)
