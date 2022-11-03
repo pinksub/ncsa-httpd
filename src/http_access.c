@@ -183,8 +183,8 @@ int find_host_deny(per_request *reqInfo, int x)
 /* match_referer()
  * currently matches restriction with sent for only as long as restricted
  */
-int match_referer(char *restrict, char *sent) {
-  return !(strcmp_match(sent,restrict));
+int match_referer(char *restricto, char *sent) {
+  return !(strcmp_match(sent,restricto));
 }
 
 /* find_referer_allow()
