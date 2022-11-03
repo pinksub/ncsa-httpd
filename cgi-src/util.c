@@ -95,7 +95,7 @@ int rind(char *s, char c) {
     return -1;
 }
 
-int getline(char *s, int n, FILE *f) {
+int getline_ncsa(char *s, int n, FILE *f) {
     register int i=0;
 
     while(1) {

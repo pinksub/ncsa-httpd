@@ -582,7 +582,7 @@ sock_buf *new_sock_buf(per_request *reqInfo, int sd)
  * This routine is currently not thread safe.
  * This routine may be thread safe. (blong 3/13/96)
  */
-int getline(sock_buf *sb, char *s, int n, int options, unsigned int timeout)
+int getline_ncsa2(sock_buf *sb, char *s, int n, int options, unsigned int timeout)
 {
     char *endp = s + n - 1;
     int have_alarmed = 0;

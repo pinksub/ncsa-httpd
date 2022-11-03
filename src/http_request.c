@@ -484,7 +484,7 @@ void get_http_headers(per_request *reqInfo)
     char *field_val;
     int options = 0;
 
-    while(getline(reqInfo->sb,field_type,HUGE_STRING_LEN-1,options,
+    while(getline_ncsa2(reqInfo->sb,field_type,HUGE_STRING_LEN-1,options,
 		  timeout) != -1) {
 
         if(!field_type[0]) 
@@ -612,7 +612,7 @@ void RequestMain(per_request *reqInfo)
       sockbuf_count++;
     }
 
-    if (getline(reqInfo->sb, as_requested, HUGE_STRING_LEN,
+    if (getline_ncsa2(reqInfo->sb, as_requested, HUGE_STRING_LEN,
 		options, timeout) == -1)
         return;
 

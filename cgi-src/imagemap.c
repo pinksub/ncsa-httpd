@@ -377,7 +377,7 @@ int isname(char c)
         return (!isspace(c));
 }
 
-int getline(char *s, int n, FILE *f) {
+int getline_ncsa(char *s, int n, FILE *f) {
     register int i=0;
 
     while(1) {

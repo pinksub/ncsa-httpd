@@ -45,7 +45,7 @@ void getword(char *word, char *line, char stop) {
     while(line[y++] = line[x++]);
 }
 
-int getline(char *s, int n, FILE *f) {
+int getline_ncsa(char *s, int n, FILE *f) {
     register int i=0;
 
     while(1) {
